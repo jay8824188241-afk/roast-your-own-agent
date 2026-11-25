@@ -24,6 +24,7 @@ def self_check(text: str) -> None:
     assert 1 <= len(text) <= 200, f"entry must be 1-200 chars, got {len(text)}"
     assert "\n" not in text and "\r" not in text, "entry must be a single line"
     assert text.strip(), "entry must not be only whitespace"
+    assert text == text.strip(), "entry must have no leading/trailing whitespace"
 
 
 def main() -> int:
